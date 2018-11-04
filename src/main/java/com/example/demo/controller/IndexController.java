@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.bean.DatabaseProperties;
 import com.example.demo.bean.User;
 import com.example.demo.bean.definition.UserService;
+import com.example.demo.bean.definition.UserServiceSay;
 
 @Component
 @ComponentScan("com.example.demo")
@@ -35,6 +36,9 @@ public class IndexController {
 	
 		System.out.println("debug jjp 2"+url);
 		userService.printUser(user);
+		UserServiceSay userServiceSay=(UserServiceSay)userService;
+		userServiceSay.sayUser(user);
+		//userService.printUser(null);
 		return "index";
 	}
 	
