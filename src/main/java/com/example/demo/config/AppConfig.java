@@ -2,6 +2,8 @@ package com.example.demo.config;
 
 import org.springframework.context.annotation.Configuration;
 
+import com.example.demo.bean.DatabaseProperties;
+
 import java.util.Properties;
 
 import javax.sql.DataSource;
@@ -22,7 +24,13 @@ public class AppConfig {
 	   user.setAddress("address wenzhou");
 	   user.setAge(22);
 	   return user;
-   }*/
+   }
+	@Bean(name="databaseProperty")
+	public DatabaseProperty getDatabaseProperty()
+	{
+		DatabaseProperty dbpro=new DatabaseProperty();
+		return dbpro;
+	}*/
 	@Bean(name="dataSource")
 	public DataSource getDataSource()
 	{

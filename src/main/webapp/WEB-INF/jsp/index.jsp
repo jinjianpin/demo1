@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-hello jjp
+hello jjp<br>
+url=${database.url}<br>
+url2=${url}
 </body>
 </html>
