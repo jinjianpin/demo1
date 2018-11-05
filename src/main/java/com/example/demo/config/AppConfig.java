@@ -8,7 +8,7 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.dbcp2.BasicDataSourceFactory;
+//import org.apache.commons.dbcp2.BasicDataSourceFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -30,15 +30,15 @@ public class AppConfig {
 	{
 		DatabaseProperty dbpro=new DatabaseProperty();
 		return dbpro;
-	}*/
+	}
 	@Bean(name="dataSource")
 	public DataSource getDataSource()
 	{
 		Properties props=new Properties();
 		props.setProperty("driver", "com.mysql.jdbc.Driver");
 		props.setProperty("url", "jdbc:mysql://localhost:3306/db1");
-		props.setProperty("username", "root");
-		props.setProperty("password", "Iamroot88");
+		props.setProperty("username", "user01");
+		props.setProperty("password", "User##demo1");
 		
 		DataSource ds=null;
 		try {
@@ -50,5 +50,5 @@ public class AppConfig {
 		}
 		return ds;
 	}
-	
+	*/
 }
