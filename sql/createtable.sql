@@ -19,3 +19,12 @@ values(1,'红烧牛肉','主食',28,25,'高级牛肉精选，味道鲜美。。�
 show variables like '%character%';
 
 select * from menuitem;
+
+-----------------
+create table t_user(
+id int(12) not null auto_increment,
+user_name varchar(60),
+sex int(3) not null default 1 check(sex in (1,2)),
+note varchar(255) null,
+primary key(id)
+);
